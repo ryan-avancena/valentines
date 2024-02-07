@@ -5,6 +5,7 @@ const particles = {
 document.querySelectorAll('button').forEach(function(button) {
     button.addEventListener('click', function(e) {
         if (e.target.id === 'yes') {
+            document.querySelector('#particles-js').style.display = "block" 
             document.querySelector('h1').innerText = "YAY, I LOVE YOU!"            
             document.querySelector('#gif').src = "https://media.tenor.com/Ka7sVbRXQUwAAAAj/tkthao219-bubududu.gif"            
 
@@ -130,6 +131,7 @@ document.querySelectorAll('button').forEach(function(button) {
         }
 
         if(e.target.id === "no") {
+            document.querySelector('#particles-js').style.display = "none" 
             const messages = [
                 'Why not?', 'Your answer makes me sad', 'Pleasee be my valentine', 
                 'b- b- but... why :(', 'You must say yes', 'I know you want to',
