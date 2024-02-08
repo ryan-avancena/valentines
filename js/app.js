@@ -5,8 +5,15 @@ const particles = {
 document.querySelectorAll('button').forEach(function(button) {
     button.addEventListener('click', function(e) {
         if (e.target.id === 'yes') {
-            document.querySelector('#particles-js').style.display = "block" 
-            document.querySelector('h1').innerText = "YAY, I LOVE YOU!"            
+            document.querySelector('#particles-js').style.display = "block"
+            const messages = [
+                'YAY, I LOVE YOU!', 'This makes me so happy!', 'Yessss!', 'OMG! She said yes :)',
+                'You choose the right answer', 'You made my day', "You've made my heart flutter!",
+                "You're my sunshine on a cloudy day!", "You mean the world to me", 'Y- you actually said yes 🥲'
+                
+            ] 
+            const random = Math.floor(Math.random() * messages.length);
+            document.querySelector('h1').innerText = messages[random]       
             document.querySelector('#gif').src = "https://media.tenor.com/Ka7sVbRXQUwAAAAj/tkthao219-bubududu.gif"            
 
             particlesJS('particles-js', {
