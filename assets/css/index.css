@@ -2,24 +2,14 @@
 
 body {
     margin: 0;
-    font-family: 'Protest Riot', sans-serif;
+    font-family: 'Verdana';
+    text-align: center;
 }
   
 canvas {
     display: block;
-    vertical-align: bottom;
 }
   
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
 
 .wrapper {
     position: absolute;
@@ -27,8 +17,11 @@ canvas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100dvh;
+    padding: 5%;
+    box-sizing: border-box;
+    /* background-color: #C1F6FF; */
 }
 
 .buttons {
@@ -40,8 +33,9 @@ canvas {
 
 h1 {
     font-weight: bold;
-    font-size: 4rem;
-    text-transform: uppercase;
+    font-size: 2rem;
+    color: #374990;
+    /* text-transform: uppercase; */
 }
 
 button {
@@ -49,17 +43,49 @@ button {
     border-radius: 5px;
     border: none;
     font-size: large;
-    font-family: 'Protest Riot', sans-serif;
+    /* font-family: 'Protest Riot', sans-serif; */
     cursor: pointer;
 }
 
+img {
+    width: 50vw;
+}
+
 #yes {
-    background-color: #54B435;
-    color: white;
+    background-color: #5BE2A3;
+    color: #378F66;
 }
 
 #no {
-    background-color: #D61C4E;
-    color: white;
+    background-color: #E25B5B;
+    color: #993B3B;
 }
 
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Prevent interaction */
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: float 3s linear forwards;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1.5);
+    }
+}
