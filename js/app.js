@@ -31,12 +31,15 @@ document.querySelectorAll('button').forEach(function(button) {
                 'pretty please', 
                 'pwetty pwease',
                 ':(', 
-                ':c',
                 'are you sure',
                 'i think you clicked the wrong button',
-                'you know you want to say yes', 
+                'you know you want to say yes!', 
                 'the yes button is actually on the left',
                 'maybe you misclicked',
+                'are you absolutely, 100% sure?',   
+                'you know deep down you really wanna say yes!',  
+                'the yes button is actually on the left, trust me!',  
+                'maybe you misclicked… , take your time!',  
             ]
             const random = Math.floor(Math.random() * messages.length);
             document.querySelector('h1').innerText = messages[random]
